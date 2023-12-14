@@ -5,10 +5,15 @@ import App from './App.jsx';
 // React Router Dom
 import { BrowserRouter } from 'react-router-dom';
 
+// Product Provider
+import { ProductProvider } from './contexts/ProductContext.jsx';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+  <ProductProvider>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </ProductProvider>
+);
