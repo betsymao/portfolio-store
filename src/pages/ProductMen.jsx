@@ -6,7 +6,7 @@ import ProductContext from '../contexts/ProductContext.jsx';
 // Components
 import Product from '../components/features/Product.jsx'
 
-function ProductWomens() {
+function ProductMen() {
     const { products } = useContext(ProductContext);
     // console.log(products);
   
@@ -27,4 +27,4 @@ function ProductWomens() {
     );
 }
 
-export default ProductWomens;
+export default ProductMen;
