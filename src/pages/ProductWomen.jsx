@@ -4,7 +4,10 @@ import { useContext } from 'react';
 import ProductContext from '../contexts/ProductContext.jsx';
 
 // Components
-import Product from '../components/features/Product.jsx'
+import Product from '../components/features/Product.jsx';
+
+// React Bootstrap Components
+import Row from 'react-bootstrap/Row';
 
 function ProductWomen() {
     const { products } = useContext(ProductContext);
@@ -18,11 +21,13 @@ function ProductWomen() {
   
     return (
       <>
-        {filteredProducts.map(product => {
-          return (
-            <Product key={product.id} product={product} />
-          );
-        })}
+        <Row>
+          {filteredProducts.map(product => {
+              return (
+                <Product key={product.id} product={product} />
+              );
+            })}
+        </Row>
       </>
     );
 }

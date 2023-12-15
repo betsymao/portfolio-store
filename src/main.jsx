@@ -8,6 +8,9 @@ import { BrowserRouter } from 'react-router-dom';
 // Product Provider
 import { ProductProvider } from './contexts/ProductContext.jsx';
 
+// React Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ProductProvider>
     <React.StrictMode>
