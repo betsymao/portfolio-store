@@ -12,7 +12,9 @@ function Layout() {
       <>
         <Container>
           <Header />
-          <Outlet />
+          <main>
+            <Outlet />
+          </main>
           <Footer />
         </Container>
       </>
