@@ -12,10 +12,14 @@ function Layout() {
       <>
         <Container>
           <Header />
-          <main>
-            <Outlet />
-          </main>
-          <Footer />
+        </Container>
+        
+        <main>
+          <Outlet />
+        </main>
+
+        <Container>
+          <Footer date={new Date().getFullYear()} />
         </Container>
       </>
     );
