@@ -1,11 +1,7 @@
-import { useContext } from 'react';
-
 import { Link } from 'react-router-dom';
 
 // React Bootstrap Components
-
 import Col from 'react-bootstrap/Col';
-
 
 function Product({ product}) {
   // console.log(product);
@@ -15,7 +11,9 @@ function Product({ product}) {
       <>
         <Col lg="6">
           <div className="productCard d-flex flex-column">
-            <img src={image} alt={title} />
+            <Link to={`/product/${id}`}>
+              <img src={image} alt={title} />
+            </Link>
 
             <div className="mt-auto">
               <div className="d-flex justify-content-between">
