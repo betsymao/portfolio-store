@@ -14,9 +14,7 @@ function Layout() {
           <Header />
         </Container>
         
-        <main>
-          <Outlet />
-        </main>
+        <Outlet />
 
         <Container>
           <Footer date={new Date().getFullYear()} />

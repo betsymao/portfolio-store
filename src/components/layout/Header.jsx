@@ -5,28 +5,24 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 // Assets
-import Logo from '../../../public/assets/logo.svg';
+import Logo from '../../assets/logo.svg';
 
 function Header() {
     return (
       <>
-        <header>
+        <header className="px-3">
           <Navbar collapseOnSelect expand="sm" className="justify-content-between">
             <div>
               <Navbar.Toggle />
               <Navbar.Collapse>
                 <Nav>
-                  <Nav.Link eventKey="1">
-                    <Link to='/men'>
-                      <div>Men</div>
-                    </Link>
-                  </Nav.Link>
+                  <Link to='/men'>
+                    <div>Men</div>
+                  </Link>
 
-                  <Nav.Link eventKey="2">
-                    <Link to='/women'>
-                      <div>Women</div>
-                    </Link>
-                  </Nav.Link>
+                  <Link to='/women'>
+                    <div>Women</div>
+                  </Link>
                 </Nav>
               </Navbar.Collapse>  
             </div>            
