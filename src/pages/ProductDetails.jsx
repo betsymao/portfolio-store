@@ -6,12 +6,16 @@ import { useParams } from 'react-router-dom';
 // Product Context
 import ProductContext from '../contexts/ProductContext';
 
+// Cart Context
+import CartContext from '../contexts/CartContext';
+
 // React Bootstrap Components
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function ProductDetails() {
+  const { addToCart } = useContext(CartContext);
   const { id } = useParams();
   const { products } = useContext(ProductContext);
 
@@ -42,7 +46,7 @@ function ProductDetails() {
                 <h4>{category}</h4>
                 <h3>${price}</h3>
                 <p>{description}</p>
-                <button>Add to Cart</button>
+                <button onClick={() => addToCart(product, product.id)}>Add to Cart</button>
               </div>
             </Col>
           </Row>
