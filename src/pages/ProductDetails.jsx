@@ -25,7 +25,11 @@ function ProductDetails() {
 
   if (!product) {
     return (
-      <p>Loading ...</p>
+      <Container>
+        <div className="body-content">
+          <p className="m-0">Loading ...</p>
+        </div>
+      </Container>
     );
   }
 
@@ -34,22 +38,24 @@ function ProductDetails() {
     return (
       <>
       <Container>
-        <Row>
-            <Col md="6" lg="6">
-              <div>
-                <img src={image} alt={title} />
-              </div>
-            </Col>
-            <Col md="6" lg="6">
-              <div>
-                <h2>{title}</h2>
-                <h4>{category}</h4>
-                <h3>${price}</h3>
-                <p>{description}</p>
-                <button className="btn btn-primary" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
-              </div>
-            </Col>
-          </Row>
+        <div className="body-content">
+          <Row>
+              <Col md="6" lg="6">
+                <div>
+                  <img src={image} alt={title} />
+                </div>
+              </Col>
+              <Col md="6" lg="6">
+                <div>
+                  <h2>{title}</h2>
+                  <h4>{category}</h4>
+                  <h3>${price}</h3>
+                  <p>{description}</p>
+                  <button className="cart-btn" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
+                </div>
+              </Col>
+            </Row>
+        </div>
       </Container>
       </>
     );

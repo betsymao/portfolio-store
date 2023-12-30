@@ -4,53 +4,62 @@ import { Link } from 'react-router-dom';
 // Cart Context
 import CartContext from '../../contexts/CartContext';
 
+// React Bootstrap Components
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+
 function CartItem({ item }) {
     const { id, image, title, price, quantity } = item;
-    const { removeFromCart, incrementQuantity, decrementQuantity, total } = useContext(CartContext);
+    const { removeFromCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
 
     return (
       <>
-        <div onClick={() => removeFromCart(id)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-            </svg>
-        </div>
-        {/* Image */}
-        <Link to={`/product/${id}`}>
-            <img src={image} alt={title} />
-        </Link>
-
-        {/* Title */}
-        <Link to={`/product/${id}`}>
-            <h5>{title}</h5>
-        </Link>
-        {/* Price */}
-        <h6>${price}</h6>
-        {/* Quantity */}
-        <div className="d-flex">
-            <div onClick={() => decrementQuantity(id) }>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+        <div className="cart-items">
+            <div className="close-btn" onClick={() => removeFromCart(id)}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="icon bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
                 </svg>
             </div>
 
-            <div>
-                {quantity}
-            </div>
 
-            <div onClick={() => incrementQuantity(id)}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                </svg>
-            </div>
-        </div>
+            <div className="d-flex">
+                <div className="wrapper">
+                    <Link to={`/product/${id}`}>
+                        <img src={image} alt={title} />
+                    </Link>
+                </div>
 
-        <div>
-            ${parseFloat(total).toFixed(2)}
-            <button>Checkout</button>
+                <div className="wrapper">
+                    <Link to={`/product/${id}`}>
+                        <p>{title}</p>
+                    </Link>
+                
+                    <p className="m-0">${price}</p>
+
+                    {/* Quantity */}
+                    <h6 className="qty-title">Quantity</h6>
+                    <div className="d-flex">
+                        <div onClick={() => decrementQuantity(id) }>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-dash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                            </svg>
+                        </div>
+
+                        <div className="qty">
+                            {quantity}
+                        </div>
+
+                        <div onClick={() => incrementQuantity(id)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </>
     );

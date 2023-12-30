@@ -18,7 +18,9 @@ function Product({ product}) {
 
             <div className="productInfo d-flex justify-content-between">
               <div>
-                {title}
+                <Link to={`/product/${id}`}>
+                  {title}
+                </Link>
               </div>
               <div>
                 <button className="add-btn" onClick={() => addToCart(product, id)}>
@@ -32,7 +34,9 @@ function Product({ product}) {
           </div>
 
           <div className="productImage">
-            <img className="productImage" src={image} alt={title} />
+            <Link to={`/product/${id}`}>
+              <img className="productImage" src={image} alt={title} />
+            </Link>
           </div>
         </div>
       </>
