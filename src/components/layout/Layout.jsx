@@ -4,21 +4,14 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
-// React Bootstrap Components
-import Container from 'react-bootstrap/Container';
-
 function Layout() {
     return (
       <>
-        <Container>
-          <Header />
-        </Container>
+        <Header />
         
         <Outlet />
 
-        <Container>
-          <Footer date={new Date().getFullYear()} />
-        </Container>
+        <Footer date={new Date().getFullYear()} />
       </>
     );
   }
