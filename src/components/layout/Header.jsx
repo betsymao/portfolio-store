@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 
 // React Bootstrap Components
+import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -16,40 +17,49 @@ function Header() {
 
     return (
       <>
-        <header className="px-3">
-          <Navbar collapseOnSelect expand="sm" className="justify-content-between">
-            <div>
-              <Navbar.Toggle />
-              <Navbar.Collapse>
+        <header>
+          <Container>
+            <Navbar collapseOnSelect expand="sm" className="justify-content-between">
+              <div className="header-menu">
+                <Navbar.Toggle />
+                <Navbar.Collapse>
+                  <Nav>
+                    <li className="header-nav-list-item">
+                      <Link to='/men'>
+                        Men
+                      </Link>
+                    </li>
+                    <li className="header-nav-list-item">
+                      <Link to='/women'>
+                        Women
+                      </Link>
+                    </li>
+                  </Nav>
+                </Navbar.Collapse>  
+              </div>            
+
+              <Navbar.Brand className="m-0">
+                <div className="logo">
+                  <Link to='/'>
+                    <img src={Logo} />
+                  </Link>
+                </div>
+              </Navbar.Brand>
+
+              <div className="cart justify-self-end d-flex">
                 <Nav>
-                  <Link to='/men'>
-                    <div>Men</div>
-                  </Link>
-
-                  <Link to='/women'>
-                    <div>Women</div>
-                  </Link>
-                </Nav>
-              </Navbar.Collapse>  
-            </div>            
-
-            <Navbar.Brand className="m-0">
-              <div>
-                <Link to='/'>
-                  <img src={Logo} />
-                </Link>
+                    <li className="cart-list-item">
+                      <Link to='/cart'>
+                        Cart
+                      </Link>
+                    </li>
+                    <li className="cart-list-item">
+                    &nbsp;({quantity})
+                    </li>
+                  </Nav>
               </div>
-            </Navbar.Brand>
-
-            <div className="justify-self-end">
-              <Link to='/cart'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-bag" viewBox="0 0 16 16">
-                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-                </svg>
-                <div>{quantity}</div>
-              </Link>
-            </div>
-          </Navbar>
+            </Navbar>
+          </Container>
         </header>
       </>
     );
