@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import ProductMen from './pages/ProductMen';
 import ProductWomen from './pages/ProductWomen';
 import ProductDetails from './pages/ProductDetails';
+import Attributions from './pages/Attributions';
 import Error from './pages/Error';
 
 // Components
@@ -23,6 +24,7 @@ function App() {
           <Route path='/men' element={<ProductMen />} />
           <Route path='/women' element={<ProductWomen />} />
           <Route path='/product/:id' element={<ProductDetails />} />
+          <Route path='/attributions' element={<Attributions />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
