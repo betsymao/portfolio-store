@@ -46,7 +46,7 @@ function ProductDetails() {
                 <h4>{category}</h4>
                 <h3>${price}</h3>
                 <p>{description}</p>
-                <button onClick={() => addToCart(product, product.id)}>Add to Cart</button>
+                <button className="btn btn-primary" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
               </div>
             </Col>
           </Row>

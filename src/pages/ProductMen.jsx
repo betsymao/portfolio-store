@@ -9,6 +9,7 @@ import Product from '../components/features/Product.jsx';
 // React Bootstrap Components
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function ProductMen() {
     const { products } = useContext(ProductContext);
@@ -22,12 +23,14 @@ function ProductMen() {
   
     return (
       <>
-        <Container className="py-5">
-          <main className="px-3 pt-5">
+        <Container>
+          <main className="body-content">
             <Row>
               {filteredProducts.map(product => {
                 return (
-                  <Product key={product.id} product={product} />
+                  <Col lg="6" className="my-5">
+                    <Product key={product.id} product={product} />
+                  </Col>
                 );
               })}
             </Row>
