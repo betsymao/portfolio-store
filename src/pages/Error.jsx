@@ -10,7 +10,7 @@ function Error() {
           <div className="body-content">
             <h1 className="title">Page not found</h1>
             <p>Sorry, we can't seem to find the page you're looking for.</p>
-            <Link>Back to home</Link>
+            <Link to="/">Back to home</Link>
           </div>
         </Container>
       </>
