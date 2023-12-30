@@ -16,7 +16,7 @@ function Product({ product}) {
               ${price}
             </div>
 
-            <div className="productInfo d-flex justify-content-between">
+            <div className="d-flex justify-content-between">
               <div>
                 <Link to={`/product/${id}`}>
                   {title}

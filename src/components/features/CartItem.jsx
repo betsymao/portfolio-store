@@ -15,7 +15,7 @@ function CartItem({ item }) {
 
     return (
       <>
-        <div className="cart-items">
+        <div className="cart-items-container">
             <div className="close-btn" onClick={() => removeFromCart(id)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="icon bi bi-x" viewBox="0 0 16 16">
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
@@ -24,13 +24,13 @@ function CartItem({ item }) {
 
 
             <div className="d-flex">
-                <div className="wrapper">
+                <div className="cart-content">
                     <Link to={`/product/${id}`}>
                         <img src={image} alt={title} />
                     </Link>
                 </div>
 
-                <div className="wrapper">
+                <div className="cart-content">
                     <Link to={`/product/${id}`}>
                         <p>{title}</p>
                     </Link>
@@ -38,7 +38,7 @@ function CartItem({ item }) {
                     <p className="m-0">${price}</p>
 
                     {/* Quantity */}
-                    <h6 className="qty-title">Quantity</h6>
+                    <h6 className="qty-subtitle">Quantity</h6>
                     <div className="d-flex">
                         <div onClick={() => decrementQuantity(id) }>
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-dash-circle" viewBox="0 0 16 16">

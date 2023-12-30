@@ -40,7 +40,7 @@ function Cart() {
                   <div className="cart-box">
                     <h4 className="subtitle">Order Summary</h4>
                     <span className="cart-total">Total:</span> ${parseFloat(total).toFixed(2)}
-                    <button className="cart-btn">Checkout</button>
+                    <button className="okapi-btn">Checkout</button>
                   </div>}
               </Col>
             </Row>  

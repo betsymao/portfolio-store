@@ -51,7 +51,7 @@ function ProductDetails() {
                   <h4>{category}</h4>
                   <h3>${price}</h3>
                   <p>{description}</p>
-                  <button className="cart-btn" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
+                  <button className="okapi-btn" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
                 </div>
               </Col>
             </Row>
