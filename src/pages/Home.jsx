@@ -10,28 +10,28 @@ function Home() {
       <Row className="g-0">
         <Col md="6" lg="6" className="p-0">
           <div>
-            <img
-              srcSet="/src/assets/hero-men-s.jpg 320w,
-                      /src/assets/hero-men-w.jpg 600w,
-                      /src/assets/hero-men-l.jpg 1200w,
-                      /src/assets/hero-men-xl.jpg 1920w"
-              sizes="(min-width: 1200px) 1200px, 100vw"
-              src="/src/assets/hero-men.jpg"
-              alt="img alt" />
-              <Link to="/men">Men</Link>
+            <Link to="/men">
+              <picture>
+                <source media="(min-width: 1200px)" 
+                      srcSet="/src/assets/hero-men-xl.jpg" />
+                <img
+                  src="/src/assets/hero-men-l.jpg"
+                  alt="Image link to men's clothing" />
+              </picture>
+            </Link>
           </div>
         </Col>
         <Col md="6" lg="6" className="p-0">
           <div>
-            <img
-              srcSet="/src/assets/hero-women-s.jpg 320w,
-                      /src/assets/hero-women-w.jpg 600w,
-                      /src/assets/hero-women-l.jpg 1200w,
-                      /src/assets/hero-women-xl.jpg 1920w"
-                sizes="(min-width: 1200px) 1200px, 100vw"
-                src="/src/assets/hero-women.jpg"
-                alt="img alt" />
-              <Link to="/women">Women</Link>
+            <Link to="/women">
+              <picture>
+                <source media="(min-width: 1200px)"
+                        srcSet="/src/assets/hero-women-xl.jpg" />
+                <img
+                  src="/src/assets/hero-women-l.jpg"
+                  alt="Image link to women's clothing" />
+              </picture>
+              </Link>
           </div>
         </Col>
       </Row>
