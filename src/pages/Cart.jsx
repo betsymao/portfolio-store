@@ -14,15 +14,16 @@ function Cart() {
 
     return (
       <>
-        <Container className="pt-5">
+        <Container>
+          <div className="body-content">
             <h1>Cart</h1>
-            {cart.length === 0 && <h2>No items</h2>}
-            {cart.map(item => {
-                return (
-                    <CartItem key={item.id} item={item} />
-                );
-            })}
-            
+              {cart.length === 0 && <h2>No items</h2>}
+              {cart.map(item => {
+                  return (
+                      <CartItem key={item.id} item={item} />
+                  );
+              })}
+          </div>           
         </Container>
       </>
     );
