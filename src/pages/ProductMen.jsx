@@ -28,8 +28,8 @@ function ProductMen() {
             <Row>
               {filteredProducts.map(product => {
                 return (
-                  <Col lg="6" className="my-5">
-                    <Product key={product.id} product={product} />
+                  <Col key={product.id} lg="6" className="my-5">
+                    <Product product={product} />
                   </Col>
                 );
               })}
