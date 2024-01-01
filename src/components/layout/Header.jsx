@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 // React Bootstrap Components
 import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
 
-import Hamburger from './../../assets/hamburger.svg';
-import Close from './../../assets/close.svg';
 // Cart Context
 import CartContext from '../../contexts/CartContext';
 
@@ -16,9 +12,6 @@ import Logo from '../../assets/logo.svg';
 
 function Header() {
   const { quantity } = useContext(CartContext);
-
-
-
 
     return (
       <>
