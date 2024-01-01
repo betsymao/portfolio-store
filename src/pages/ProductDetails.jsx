@@ -33,7 +33,7 @@ function ProductDetails() {
     );
   }
 
-  const { image, title, category, price, description } = product;
+  const { image, title, price, description } = product;
 
     return (
       <>
@@ -41,15 +41,14 @@ function ProductDetails() {
         <div className="body-content">
           <Row>
               <Col md="6" lg="6">
-                <div>
+                <div className="mb-5">
                   <img src={image} alt={title} />
                 </div>
               </Col>
               <Col md="6" lg="6">
                 <div>
                   <h2>{title}</h2>
-                  <h4>{category}</h4>
-                  <h3>${price}</h3>
+                  <h4>${price}</h4>
                   <p>{description}</p>
                   <button className="okapi-btn" onClick={() => addToCart(product, product.id)}>Add to Cart</button>
                 </div>
