@@ -1,11 +1,11 @@
+// Libraries
 import { useContext } from 'react';
-
 import { Link } from 'react-router-dom';
 
 // Components
 import CartItem from '../components/features/CartItem';
 
-// Cart Context
+// Contexts
 import CartContext from '../contexts/CartContext';
 
 // React Bootstrap Components

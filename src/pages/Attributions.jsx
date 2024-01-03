@@ -17,5 +17,4 @@ function Attributions() {
     );
   }
   
-  export default Attributions;
-  
+export default Attributions;

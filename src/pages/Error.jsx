@@ -1,3 +1,4 @@
+// Libraries
 import { Link } from 'react-router-dom';
 
 // React Bootstrap Components
@@ -16,6 +17,5 @@ function Error() {
       </>
     );
   }
-  
-  export default Error;
-  
+
+export default Error;
