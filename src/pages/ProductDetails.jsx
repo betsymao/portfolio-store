@@ -1,12 +1,9 @@
+// Libraries
 import { useContext } from 'react';
-
-// useParams
 import { useParams } from 'react-router-dom';
 
-// Product Context
+// Contexts
 import ProductContext from '../contexts/ProductContext';
-
-// Cart Context
 import CartContext from '../contexts/CartContext';
 
 // React Bootstrap Components
