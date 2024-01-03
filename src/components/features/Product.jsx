@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom';
+// Libraries
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
-// Cart Context
+// Contexts
 import CartContext from '../../contexts/CartContext';
 
-function Product({ product}) {
+function Product({ product }) {
+  // Use function from context
   const { addToCart } = useContext(CartContext);
+  
+  // Destructure product
   const { id, image, title, price } = product;
 
     return (
@@ -44,4 +48,3 @@ function Product({ product}) {
   }
   
   export default Product;
-  

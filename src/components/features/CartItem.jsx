@@ -1,17 +1,17 @@
+// Libraries
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 // Cart Context
 import CartContext from '../../contexts/CartContext';
 
-// React Bootstrap Components
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-
+// React component to render cart item
 function CartItem({ item }) {
+    // Destructure item
     const { id, image, title, price, quantity } = item;
-    const { removeFromCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
+    // Use functions from context
+    const { removeFromCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
     return (
       <>
@@ -37,7 +37,6 @@ function CartItem({ item }) {
                 
                     <p className="m-0">${price}</p>
 
-                    {/* Quantity */}
                     <h6 className="qty-subtitle">Quantity</h6>
                     <div className="d-flex">
                         <div onClick={() => decrementQuantity(id) }>
@@ -66,4 +65,3 @@ function CartItem({ item }) {
   }
   
   export default CartItem;
-  
