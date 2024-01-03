@@ -1,0 +1,39 @@
+// Footer
+footer {
+    padding-top: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F0F2F0;
+
+    .footer-box {
+        margin-bottom: 5rem;
+        padding-inline: 1.5rem;
+    
+        .footer-nav {
+            .footer-nav-list {
+                list-style-type: none;
+                padding: 0;
+            }
+        
+            .footer-nav-list-item {
+                padding-bottom: 0.75rem;
+            }
+        }
+    
+        .social-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+    
+            .social-list-item {
+                padding-right: 1rem;
+                font-size: 2rem;
+                margin-top: -0.35rem;
+            }
+        }
+    }
+
+    .footer-bar {
+        padding-inline: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
