@@ -1,16 +1,18 @@
-import { Link } from 'react-router-dom';
+// Libraries
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+// Contexts
+import CartContext from '../../contexts/CartContext';
 
 // React Bootstrap Components
 import Container from 'react-bootstrap/Container';
-
-// Cart Context
-import CartContext from '../../contexts/CartContext';
 
 // Assets
 import Logo from '../../assets/logo.svg';
 
 function Header() {
+  // Use context
   const { quantity } = useContext(CartContext);
 
     return (
@@ -55,4 +57,3 @@ function Header() {
   }
   
   export default Header;
-  
