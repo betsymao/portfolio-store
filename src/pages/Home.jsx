@@ -1,6 +1,12 @@
 // Libraries
 import { Link } from 'react-router-dom';
 
+// Assets
+import HeroMenXL from '../assets/hero-men-xl.jpg';
+import HeroMenL from '../assets/hero-men-l.jpg';
+import HeroWomenXL from '../assets/hero-women-xl.jpg';
+import HeroWomenL from '../assets/hero-women-l.jpg';
+
 // React Bootstrap Components
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,9 +20,9 @@ function Home() {
             <div className="hero-img-container">
                 <picture>
                   <source media="(min-width: 1200px)" 
-                        srcSet="/src/assets/hero-men-xl.jpg" />
+                        srcSet={HeroMenXL} />
                   <img
-                    src="/src/assets/hero-men-l.jpg"
+                    src={HeroMenL}
                     alt="Image link to men's clothing" />
                 </picture>
               <div className="overlay">
@@ -32,9 +38,9 @@ function Home() {
             <div className="hero-img-container">
                 <picture>
                     <source media="(min-width: 1200px)"
-                            srcSet="/src/assets/hero-women-xl.jpg" />
+                            srcSet={HeroWomenXL} />
                     <img
-                      src="/src/assets/hero-women-l.jpg"
+                      src={HeroWomenL}
                       alt="Image link to women's clothing" />
                   </picture>
               <div className="overlay">
