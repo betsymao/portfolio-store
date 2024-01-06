@@ -64,7 +64,7 @@ export function CartProvider ({ children }) {
         }
     };
 
-    // Filter through cart return items that do are not equal to id provided as a parameter
+    // Filter through cart and return items that are not equal to id provided as a parameter
     const removeFromCart = (id) => {
         const newCart = cart.filter(item => {
             return item.id !== id;
@@ -99,7 +99,7 @@ export function CartProvider ({ children }) {
             setCart(newCart);
         }
         
-        // If cart item quantity is 1
+        // If cart item quantity is less than 2
         if (cartItem.quantity < 2) {
             // Call function to remove from cart
             removeFromCart(id);
