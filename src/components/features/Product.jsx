@@ -14,7 +14,15 @@ function Product({ product }) {
 
     return (
       <>
+
         <div className="product-card p-1">
+          
+          <div className="productImage">
+            <Link to={`/product/${id}`}>
+              <img className="productImage" src={image} alt={title} />
+            </Link>
+          </div>
+
           <div className="product-details">
             <div className="product-price">
               ${price}
@@ -37,11 +45,6 @@ function Product({ product }) {
             </div>
           </div>
 
-          <div className="productImage">
-            <Link to={`/product/${id}`}>
-              <img className="productImage" src={image} alt={title} />
-            </Link>
-          </div>
         </div>
       </>
     );

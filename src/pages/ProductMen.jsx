@@ -25,15 +25,13 @@ function ProductMen() {
     <>
       <Container>
         <main className="body-content">
-          <Row>
+          <div className="products">
             {filteredProducts.map(product => {
               return (
-                <Col key={product.id} lg="6" className="my-5">
-                  <Product product={product} />
-                </Col>
+                <Product product={product} />
               );
             })}
-          </Row>
+          </div>
         </main>
       </Container>
     </>

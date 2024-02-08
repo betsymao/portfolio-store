@@ -25,15 +25,13 @@ function ProductWomen() {
     <>
       <Container>
         <main className="body-content">
-          <Row>
+          <div className="products">
             {filteredProducts.map(product => {
               return (
-                <Col key={product.id} lg="6" className="my-5">
-                  <Product key={product.id} product={product} />
-                </Col>
+                <Product key={product.id} product={product} />
               );
             })}
-          </Row>
+          </div>
         </main>
       </Container>
     </>

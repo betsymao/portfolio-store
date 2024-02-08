@@ -1,14 +1,30 @@
 // Product feature
-.product-card {
-    .product-details {
-        border-bottom: 1px solid #8A837B;
-        padding-block: 0.5rem;
-        margin-bottom: 2rem;
-    }
-}
+.products {
+    display: grid;
+    gap: 8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
 
-.add-btn {
-    border: none;
-    background: none;
-    margin-top: -1rem;
+    .product-card {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+
+        .productImage {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    
+        .product-details {
+            border-top: 1px solid #8A837B;
+            padding-top: 0.75rem;
+            font-size: 0.75rem;
+
+            .add-btn {
+                border: none;
+                background: none;
+                margin-top: -1rem;
+            }
+        }
+    }
 }
