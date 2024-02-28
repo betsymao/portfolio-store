@@ -68,7 +68,7 @@ function Footer({ date }) {
           <Row>
             <Col>
               <div className="footer-bar">
-                <span>&copy; {date} OKAPI</span> / <Link to='/attributions'>Attributions</Link> / Example Project by <a href='/'>Betsy</a>.
+                <span>&copy; {date} OKAPI</span> / <Link to='/attributions'>Attributions</Link> / Example Project by <a href='https://betsymao.onrender.com/'>Betsy</a>.
               </div>
             </Col>
           </Row>
